@@ -1,0 +1,16 @@
+{
+  "oidcConfig": {
+    "clientId": "portalDev",
+    "identityServerUrl": "https://dev.identity.linkdev.com",
+    "scopes": "offline_access openid profile LookupAPI AccessManagementAPI DocumentManagementAPI NotificationAPI ServiceManagementAPI",
+    "responsetype": "code",
+    "redirectUri": "http://localhost:6200/assets/callback.html",
+    "postLogoutRedirectUri": "http://localhost:6200"
+  },
+  "lookupsApi": "http://localhost/Lookup/api",
+  "accessManagementUrl": "https://dev.accessmanagement.servebig.linkdev.com",
+  "portalUrl": "http://localhost:6200",
+  "documentManagementUrl": "https://dev.documentwallet.servebig.linkdev.com",
+  "changePasswordUrl": "https://dev.identity.linkdev.com/Account/ChangePassword",
+  "serviceManagementUrl": "https://Dev.Eservice.ServeBig.LinkDev.com"
+}

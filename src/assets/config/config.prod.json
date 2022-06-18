@@ -1,0 +1,16 @@
+{
+  "oidcConfig": {
+    "clientId": "#{ServeBigAdminSpa.OidcConfig.ClientId}#",
+    "identityServerUrl": "#{ServeBigSpa.OidcConfig.IdentityServerUrl}#",
+    "scopes":"offline_access openid profile LookupAPI AccessManagementAPI DocumentManagementAPI NotificationAPI ServiceManagementAPI",
+    "responsetype":"code",
+    "redirectUri": "#{ServeBigAdminSpa.OidcConfig.RedirectUri}#",
+    "postLogoutRedirectUri": "#{ServeBigAdminSpa.OidcConfig.PortalUrl}#"
+  },
+  "lookupsApi": "#{ServeBigSpa.lookupsApi}#",
+  "accessManagementUrl": "#{ServeBigSpa.accessManagementUrl}#",
+  "portalUrl": "#{ServeBigAdminSpa.OidcConfig.PortalUrl}#",
+  "documentManagementUrl": "#{ServeBigSpa.documentManagementUrl}#",
+  "changePasswordUrl": "#{ServeBigSpa.OidcConfig.IdentityServerUrl}#",
+  "serviceManagementUrl": "#{ServeBigSpa.serviceManagementUrl}#"
+}

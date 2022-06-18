@@ -1,0 +1,45 @@
+<div class="m-333">
+    <!-- <span fxFlex></span> -->
+    <button mat-raised-button class="mb-8" color="primary" (click)="openPopUp({}, true)">{{"ADD" | translate }} {{"MEMBER" | translate }}</button>
+  </div>
+  <mat-card class="p-0" [@animate]="{value:'*',params:{y:'50px',delay:'300ms'}}">
+    <mat-card-content class="p-0">
+      <ngx-datatable
+            class="material ml-0 mr-0"
+            [rows]="filteredLookups"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [scrollbarH]="true"
+            [limit]="10"
+            [rowHeight]="50">
+            <ngx-datatable-column [name]="'administrationModule.displayName' | translate" [flexGrow]="1">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row?.displayName }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column [name]="'administrationModule.uniqueKey' | translate" [flexGrow]="1">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row?.uniqueKey }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column [name]="'administrationModule.modifiedBy' | translate"  [flexGrow]="1">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row?.modifiedBy | currency }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column [name]="'administrationModule.modifiedAt' | translate"  [flexGrow]="1">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row?.modifiedAt }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Actions" [flexGrow]="1">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                <button mat-icon-button mat-sm-button color="primary" class="mr-16" (click)="openPopUp(row)"><mat-icon>edit</mat-icon></button>
+                <button mat-icon-button mat-sm-button color="warn" (click)="deleteItem(row)"><mat-icon>delete</mat-icon></button>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+    </mat-card-content>
+  </mat-card>
+  
